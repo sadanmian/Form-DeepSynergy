@@ -11,6 +11,8 @@ let checkLast = document.getElementById('checkLast')
 let checkPhone = document.getElementById('checkPhone')
 let checkAltPhone = document.getElementById('checkAltPhone')
 let checkEmail = document.getElementById('checkEmail')
+let checkMsg1 = document.getElementById('checkMsg1')
+let checkMsg2 = document.getElementById('checkMsg2')
 
 const validateFirstName = () => {
     let firstname = document.getElementById('first-name').value
@@ -113,4 +115,29 @@ const validateEmail = () => {
     emailError.innerHTML = ''
     checkEmail.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
+}
+
+const validateMsg1 = () => {
+    let msg1 = document.getElementById('msg1').value
+    if (msg1.length == 0) {
+        msgError1.innerHTML = 'This field is required'
+        checkMsg1.innerHTML = '*'
+        return false;
+    }
+    msgError1.innerHTML = ''
+    checkMsg1.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
+    return true
+
+}
+const validateMsg2 = () => {
+    let msg2 = document.getElementById('msg2').value
+    if (msg2.length == 0) {
+        msgError2.innerHTML = 'This field is required'
+        checkMsg2.innerHTML = '*'
+        return false;
+    }
+    msgError2.innerHTML = ''
+    checkMsg2.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
+    return true
+
 }
