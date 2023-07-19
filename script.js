@@ -10,6 +10,7 @@ let checkFirst = document.getElementById('checkFirst')
 let checkLast = document.getElementById('checkLast')
 let checkPhone = document.getElementById('checkPhone')
 let checkAltPhone = document.getElementById('checkAltPhone')
+let checkEmail = document.getElementById('checkEmail')
 
 const validateFirstName = () => {
     let firstname = document.getElementById('first-name').value
@@ -18,11 +19,11 @@ const validateFirstName = () => {
         checkFirst.innerHTML = '*'
         return false;
     }
-    // if (!firstname.match(/^[A-Za-z]*$/)) {
-    //     firstNameError.innerHTML = 'Write First Name'
-    //     check.innerHTML = '*'
-    //     return false;
-    // }
+    if (!firstname.match(/^[A-Za-z]*$/)) {
+        firstNameError.innerHTML = 'Enter Valid Name'
+        check.innerHTML = '*'
+        return false;
+    }
     firstNameError.innerHTML = ''
     checkFirst.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
@@ -35,11 +36,11 @@ const validateLastName = () => {
         checkLast.innerHTML = '*'
         return false;
     }
-    // if (!firstname.match(/^[A-Za-z]*$/)) {
-    //     firstNameError.innerHTML = 'Write First Name'
-    //     check.innerHTML = '*'
-    //     return false;
-    // }
+    if (!lastname.match(/^[A-Za-z]*$/)) {
+        lastNameError.innerHTML = 'Enter Valid Name'
+        checkLast.innerHTML = '*'
+        return false;
+    }
     lastNameError.innerHTML = ''
     checkLast.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
@@ -95,5 +96,21 @@ const validateAltPhone = () => {
     // }
     altPhoneError.innerHTML = ''
     checkAltPhone.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
+    return true
+}
+const validateEmail = () => {
+    let email = document.getElementById('email').value
+    if (email.length == 0) {
+        emailError.innerHTML = 'Email is required'
+        checkEmail.innerHTML = '*'
+        return false;
+    }
+    if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        emailError.innerHTML = 'Email Invalid'
+        checkEmail.innerHTML = '*'
+        return false;
+    }
+    emailError.innerHTML = ''
+    checkEmail.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
 }
