@@ -5,6 +5,7 @@ let altPhoneError = document.getElementById('alt-phone-error')
 let emailError = document.getElementById('email-error')
 let msgError1 = document.getElementById('message-error-1')
 let msgError2 = document.getElementById('message-error-2')
+let optionError = document.getElementById('option-error');
 let submitError = document.getElementById('submit-error')
 let checkFirst = document.getElementById('checkFirst')
 let checkLast = document.getElementById('checkLast')
@@ -13,6 +14,7 @@ let checkAltPhone = document.getElementById('checkAltPhone')
 let checkEmail = document.getElementById('checkEmail')
 let checkMsg1 = document.getElementById('checkMsg1')
 let checkMsg2 = document.getElementById('checkMsg2')
+let checkOption = document.getElementById('checkOption')
 
 const validateFirstName = () => {
     let firstname = document.getElementById('first-name').value
@@ -140,4 +142,16 @@ const validateMsg2 = () => {
     checkMsg2.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
 
+}
+
+const validateOption = () => {
+    let selectOption = document.getElementById('selectOption').value
+    if (selectOption === "option0") {
+        optionError.innerHTML = 'Please select an option from the dropdown menu.'
+        checkOption.innerHTML = '*'
+        return false;
+    }
+    optionError.innerHTML = ''
+    checkOption.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
+    return true;
 }

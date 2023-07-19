@@ -45,13 +45,12 @@
           <span id="email-error"></span>
         </div>
         <div class="right">
-          <label>I'd like to<span id="check">*</span></label>
-          <!-- <input type="email" placeholder="Enter Email"> -->
-          <select name="" id="">
-            <option value="">Please Select</option>
-            <option value="">Finance my tech stack</option>
-            <option value="">Offer contract financing to my customers</option>
-            <option value="">Something else</option>
+          <label>I'd like to<span id="checkOption">*</span></label>
+          <select name="selectOption" id="selectOption" onclick="validateOption()">
+            <option class="option0" value="option0">Please Select</option>
+            <option value="option1">Finance my tech stack</option>
+            <option value="option2">Offer contract financing to my customers</option>
+            <option value="option3">Something else</option>
           </select>
           <span id="option-error"></span>
         </div>

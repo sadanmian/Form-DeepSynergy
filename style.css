@@ -98,6 +98,10 @@ form button {
     justify-content: center;
 }
 
-label span i{
+label span i {
     margin: auto 5px;
+}
+
+.option0 {
+    color: gray;
 }
