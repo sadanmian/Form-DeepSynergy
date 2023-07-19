@@ -67,11 +67,6 @@ const validatePhone = () => {
         checkPhone.innerHTML = '*'
         return false;
     }
-    // if (!firstname.match(/^[A-Za-z]*$/)) {
-    //     firstNameError.innerHTML = 'Write First Name'
-    //     check.innerHTML = '*'
-    //     return false;
-    // }
     phoneError.innerHTML = ''
     checkPhone.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
@@ -93,11 +88,6 @@ const validateAltPhone = () => {
         checkAltPhone.innerHTML = '*'
         return false;
     }
-    // if (!firstname.match(/^[A-Za-z]*$/)) {
-    //     firstNameError.innerHTML = 'Write First Name'
-    //     check.innerHTML = '*'
-    //     return false;
-    // }
     altPhoneError.innerHTML = ''
     checkAltPhone.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
@@ -154,4 +144,15 @@ const validateOption = () => {
     optionError.innerHTML = ''
     checkOption.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true;
+}
+
+const validateForm = () => {
+    if (!validateFirstName() || !validateLastName() || !validatePhone() || !validateAltPhone() || !validateEmail() || !validateMsg1() || !validateMsg2() || !validateOption()) {
+        submitError.style.display = 'block'
+        submitError.innerHTML = 'Please fix error to submit.'
+        setTimeout(() => {
+            submitError.style.display = 'none'
+        }, 3000);
+        return false;
+    }
 }
