@@ -10,17 +10,21 @@
 
 <body>
   <div class="container">
+    <div class="contact">CONTACT</div>
+    <div class="connect">Let's connect</div>
+    <div class="form-data">Please fill out the form below and we'll reach out right away.</div>
+
     <form>
       <div class="input-group">
         <div class="left">
           <label>First name<span id="checkFirst">*</span></label>
-          <input type="text" placeholder="Enter First name" id="first-name" onkeyup="validateFirstName()">
+          <input type="text" id="first-name" onkeyup="validateFirstName()">
           <span id="first-name-error"></span>
         </div>
 
         <div class="right">
           <label>Last name<span id="checkLast">*</span></label>
-          <input type="text" placeholder="Enter Last name" id="last-name" onkeyup="validateLastName()">
+          <input type="text" id="last-name" onkeyup="validateLastName()">
           <span id="last-name-error"></span>
         </div>
       </div>
@@ -28,12 +32,12 @@
       <div class="input-group">
         <div class="left">
           <label>Phone No.<span id="checkPhone">*</span></label>
-          <input type="tel" placeholder="123 456 7890" id="phone" onkeyup="validatePhone()">
+          <input type="tel" id="phone" onkeyup="validatePhone()">
           <span id="phone-error"></span>
         </div>
         <div class="right">
           <label>Alternate Phone No.<span id="checkAltPhone">*</span></label>
-          <input type="tel" placeholder="123 456 7890" id="alt-phone" onkeyup="validateAltPhone()">
+          <input type="tel" id="alt-phone" onkeyup="validateAltPhone()">
           <span id="alt-phone-error"></span>
         </div>
       </div>
@@ -41,7 +45,7 @@
       <div class="input-group">
         <div class="left">
           <label>Email Id<span id="checkEmail">*</span></label>
-          <input type="email" placeholder="Enter Email" id="email" onkeyup="validateEmail()">
+          <input type="email" id="email" onkeyup="validateEmail()">
           <span id="email-error"></span>
         </div>
         <div class="right">
@@ -59,7 +63,7 @@
       <div class="input-group">
         <div class="left">
           <label>How did you hear about us?<span id="checkMsg1">*</span></label>
-          <input type="text" placeholder="write here" id="msg1" onkeyup="validateMsg1()">
+          <input type="text" id="msg1" onkeyup="validateMsg1()">
           <span id="message-error-1"></span>
         </div>
       </div>
@@ -67,7 +71,7 @@
       <div class="input-group">
         <div class="left">
           <label>Anything else you'd like us to know?<span id="checkMsg2">*</span></label>
-          <input type="text" placeholder="write here to us" id="msg2" onkeyup="validateMsg2()">
+          <input type="text" id="msg2" onkeyup="validateMsg2()">
           <span id="message-error-2"></span>
         </div>
       </div>
