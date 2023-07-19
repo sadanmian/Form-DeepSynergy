@@ -9,6 +9,7 @@ let submitError = document.getElementById('submit-error')
 let checkFirst = document.getElementById('checkFirst')
 let checkLast = document.getElementById('checkLast')
 let checkPhone = document.getElementById('checkPhone')
+let checkAltPhone = document.getElementById('checkAltPhone')
 
 const validateFirstName = () => {
     let firstname = document.getElementById('first-name').value
@@ -68,5 +69,31 @@ const validatePhone = () => {
     // }
     phoneError.innerHTML = ''
     checkPhone.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
+    return true
+}
+const validateAltPhone = () => {
+    let altphone = document.getElementById('alt-phone').value
+    if (altphone.length == 0) {
+        altPhoneError.innerHTML = 'Alternate Phone Number is required'
+        checkAltPhone.innerHTML = '*'
+        return false;
+    }
+    if (altphone.length != 10) {
+        altPhoneError.innerHTML = 'Alternate Phone Number should be 10 digit'
+        checkAltPhone.innerHTML = '*'
+        return false;
+    }
+    if (!altphone.match(/^[0-9]{10}$/)) {
+        altPhoneError.innerHTML = 'Only digits please.'
+        checkAltPhone.innerHTML = '*'
+        return false;
+    }
+    // if (!firstname.match(/^[A-Za-z]*$/)) {
+    //     firstNameError.innerHTML = 'Write First Name'
+    //     check.innerHTML = '*'
+    //     return false;
+    // }
+    altPhoneError.innerHTML = ''
+    checkAltPhone.innerHTML = '<i class="fa-solid fa-circle-check fa-sm" style="color: #219739;"></i>'
     return true
 }
